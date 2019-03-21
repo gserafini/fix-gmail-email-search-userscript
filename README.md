@@ -2,6 +2,8 @@
 
 This is a Greasemonky userscript to fix missing "Emails" search in Gmail.  It works as of 20 March 2019 (Gmail's markup likely will change over time.)
 
+![Screenshot of new search icon](https://github.com/gserafini/fix-gmail-email-search-userscript/raw/master/fix-gmail-email-search-screenshot.png)
+
 My plan is to keep this up to date as long as they're missing this key functionality.
 
 This script delivers even better functionality than Gmail used to have.  In the past you would have to hover over a contact's name, wait for the pop-up to show, then click the "Emails" link to get a list of all the emails you had sent or received for that contact.
