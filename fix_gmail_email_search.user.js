@@ -2,7 +2,7 @@
 // @name         Fix Gmail Email Search
 // @namespace    https://github.com/gserafini/fix-gmail-email-search-userscript/
 // @version      1.0
-// @description  Bring back the old "Emails" quick search functionality
+// @description  Bring back the old "Emails" quick search functionality to Gmail, improved to not require hovering -- one click to view all emails you've sent or received from any address
 // @author       Gabriel Serafini
 // @license      MIT
 // @donate       If you like this, PayPal a little love to gserafini@gmail.com
