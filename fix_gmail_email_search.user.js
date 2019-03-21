@@ -6,6 +6,7 @@
 // @author       Gabriel Serafini
 // @donate       If you like this, PayPal a little love to gserafini@gmail.com
 // @screenshot   https://github.com/gserafini/fix-gmail-email-search-userscript/raw/master/fix-gmail-email-search-screenshot.png
+// @updateURL    https://github.com/gserafini/fix-gmail-email-search-userscript/raw/master/fix_gmail_email_search.user.js
 // @match        http://*/*
 // @grant        none
 // @include      *gmail.com/*
