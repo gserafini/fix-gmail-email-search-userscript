@@ -4,6 +4,7 @@
 // @version      1.0
 // @description  Bring back the old "Emails" quick search functionality
 // @author       Gabriel Serafini
+// @license      MIT
 // @donate       If you like this, PayPal a little love to gserafini@gmail.com
 // @screenshot   https://github.com/gserafini/fix-gmail-email-search-userscript/raw/master/fix-gmail-email-search-screenshot.png
 // @match        http://*/*
