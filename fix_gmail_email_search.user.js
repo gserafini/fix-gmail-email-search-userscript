@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Fix Gmail Email Search
 // @namespace    https://github.com/gserafini/fix-gmail-email-search-userscript/
-// @version      0.1
+// @version      1.0
 // @description  Bring back the old "Emails" quick search functionality
 // @author       Gabriel Serafini
 // @donate       If you like this, PayPal a little love to gserafini@gmail.com
