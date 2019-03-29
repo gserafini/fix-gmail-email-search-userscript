@@ -1,19 +1,23 @@
 // ==UserScript==
 // @name         Fix Gmail Email Search
 // @namespace    https://github.com/gserafini/fix-gmail-email-search-userscript/
-// @version      1.0
+// @version      1.1
 // @description  Bring back the old "Emails" quick search functionality to Gmail, improved to not require hovering -- one click to view all emails you've sent or received from any address
 // @author       Gabriel Serafini
 // @license      MIT
 // @donate       If you like this, PayPal a little love to gserafini@gmail.com
 // @screenshot   https://github.com/gserafini/fix-gmail-email-search-userscript/raw/master/fix-gmail-email-search-screenshot.png
 // @updateURL    https://github.com/gserafini/fix-gmail-email-search-userscript/raw/master/fix_gmail_email_search.user.js
-// @match        http://*/*
-// @grant        none
+// @match        *://mail.google.com/*
+// @match        *://gmail.com/*
 // @include      *gmail.com/*
 // @include      *mail.google.com/*
-// @require      http://code.jquery.com/jquery-3.3.1.min.js
+// @grant        none
+// @require      https://code.jquery.com/jquery-3.3.1.min.js
 // ==/UserScript==
+
+// [1] skip all iframe
+if (window.self!=window.top) {return}
 
 (function() {
     'use strict';
@@ -23,6 +27,7 @@
 
         function insert_email_search_icon() {
 
+            // This may change over time, so will need to update it periodically most likely
             $('.gD').not('.email_search_icon+.gD')
                 .each( 
                     function (index) {
@@ -33,14 +38,13 @@
                 );
         }
 
-        // Run every 1 seconds...
-        // Not quite sure how to only fire when Gmail updates the interface / inserts new divs or if there's a better way to do this
-        setInterval(insert_email_search_icon, 1000);
+        // Poll periodically for newly created divs
+        setInterval(insert_email_search_icon, 400);
 
         $('body').on('click', '.email_search_icon', function() {
             event.stopPropagation();
             $('input[name="q"]').val($(this).attr('email'));
-            $('button.gb_ff.gb_gf').click();
+            $('button[aria-label="Search Mail"]').click(); // more stable way to find submit button than the classname
             console.log("Search icon clicked!  Searching for " + $(this).attr('email') + "...");
         });
 
