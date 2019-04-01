@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Fix Gmail Email Search
 // @namespace    https://github.com/gserafini/fix-gmail-email-search-userscript/
-// @version      1.3
+// @version      1.3.1
 // @description  Improved version of the old "Emails" quick search functionality in Gmail, one click to view all emails you've sent or received from any address
 // @author       Gabriel Serafini
 // @license      MIT
@@ -9,11 +9,11 @@
 // @screenshot   https://github.com/gserafini/fix-gmail-email-search-userscript/raw/master/fix-gmail-email-search-screenshot.png
 // @updateURL    https://github.com/gserafini/fix-gmail-email-search-userscript/raw/master/fix_gmail_email_search.user.js
 // @match        *://mail.google.com/*
-// @match        *://contacts.google.com/*
+// @match        *://contacts.google.com/widget/hovercard/*
 // @match        *://gmail.com/*
 // @include      *gmail.com/*
 // @include      *mail.google.com/*
-// @include      *contacts.google.com/*
+// @include      *contacts.google.com/widget/hovercard/*
 // @grant        none
 // @require      https://code.jquery.com/jquery-3.3.1.min.js
 // ==/UserScript==
@@ -24,14 +24,16 @@
     $(function() {
         // Handler for .ready() called.
 
-        $('body').prepend('<style>.email_search_icon {display: inline-flex; justify-content: center; outline: none; position: relative; z-index: 0; padding: 2px 0 0 0; margin: 0 4px;} ' +
-                          '.email_search_icon svg {fill: #600;} .email_search_icon svg:hover {fill: #f00;} .email_search_icon {cursor: pointer;} </style>');
+        $('body').prepend('<style>.email_search_icon {outline: none; ' +
+                          'position: relative; z-index: 0; padding: 0 4px; margin: 0; top: 2px;} ' +
+                          '.email_search_icon svg {fill: #600;} .email_search_icon svg:hover {fill: #f00;} ' +
+                          '.email_search_icon {cursor: pointer;} </style>');
 
         function get_email_search_icon_link(email_address) {
 
             var icon = '<span style=""' +
                 'class="email_search_icon" title="Click to search for all emails with ' + email_address + '" email="' + email_address + '">' +
-                '<svg focusable="false" height="16px" viewBox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg">' +
+                '<svg focusable="false" height="1em" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">' +
                 '<path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 ' +
                 '4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span>';
 
@@ -42,7 +44,7 @@
 
             // This may change over time, so will need to update it periodically most likely
             $('.gD').not('.email_search_icon+.gD')
-                .each( 
+                .each(
                     function (index) {
                         console.log("Found email for possible searching: " + $(this).attr('email'));
                         $(this)
@@ -77,7 +79,7 @@
                 console.log("Search email for " + $(this).attr('email') + " link clicked in hovercard");
                 window.parent.postMessage("searchForEmail="+$(this).attr('email'),"*");
             }
-            
+
         });
 
         if (window.self==window.top) {
