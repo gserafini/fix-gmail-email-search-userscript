@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         Fix Gmail Email Search
 // @namespace    https://github.com/gserafini/fix-gmail-email-search-userscript/
-// @version      1.3.1
+// @version      1.3.2
 // @description  Improved version of the old "Emails" quick search functionality in Gmail, one click to view all emails you've sent or received from any address
 // @author       Gabriel Serafini
 // @license      MIT
 // @donate       If you like this, PayPal a little love to gserafini@gmail.com
-// @screenshot   https://github.com/gserafini/fix-gmail-email-search-userscript/raw/master/fix-gmail-email-search-screenshot.png
+// @screenshot   https://raw.githubusercontent.com/gserafini/fix-gmail-email-search-userscript/master/fix-gmail-email-search-screenshot.png
+// @icon         https://raw.githubusercontent.com/gserafini/fix-gmail-email-search-userscript/master/SearchEmails_icon.png
 // @updateURL    https://github.com/gserafini/fix-gmail-email-search-userscript/raw/master/fix_gmail_email_search.user.js
 // @match        *://mail.google.com/*
 // @match        *://contacts.google.com/widget/hovercard/*
