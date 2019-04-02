@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Fix Gmail Email Search
 // @namespace    https://github.com/gserafini/fix-gmail-email-search-userscript/
-// @version      1.3.2
+// @version      1.4
 // @description  Improved version of the old "Emails" quick search functionality in Gmail, one click to view all emails you've sent or received from any address
 // @author       Gabriel Serafini
 // @license      MIT
@@ -47,18 +47,18 @@
             $('.gD').not('.email_search_icon+.gD')
                 .each(
                     function (index) {
-                        console.log("Found email for possible searching: " + $(this).attr('email'));
+                        // console.log("Found email for possible searching: " + $(this).attr('email'));
                         $(this)
                             .before(get_email_search_icon_link($(this).attr('email')))
                     }
                 );
 
             // Find all emails in pop-up contact cards and also inside emails
-            $('a[href^="mailto:"]').not('.email_search_icon+a[href^="mailto:"]')
+            $('a[href^="mailto:"]').not('.email_search_icon+a[href^="mailto:"]').not('contenteditable="true"+a[href^="mailto:"]')
                 .each(
                     function (index) {
                         var email_address = $(this).attr('href').replace("mailto:","");
-                        console.log("Found email for possible searching: " + email_address);
+                        // console.log("Found email for possible searching: " + email_address);
                         $(this)
                             .before(get_email_search_icon_link(email_address));
                     }
@@ -74,10 +74,10 @@
             if (window.self==window.top) {
                 $('input[name="q"]').val($(this).attr('email'));
                 $('button[aria-label="Search Mail"]').click();
-                console.log("Search icon clicked!  Searching for " + $(this).attr('email') + "...");
+                // console.log("Search icon clicked!  Searching for " + $(this).attr('email') + "...");
             }
             else {
-                console.log("Search email for " + $(this).attr('email') + " link clicked in hovercard");
+                // console.log("Search email for " + $(this).attr('email') + " link clicked in hovercard");
                 window.parent.postMessage("searchForEmail="+$(this).attr('email'),"*");
             }
 
@@ -88,14 +88,14 @@
                 var event = e.originalEvent;
                 if (event.origin === "https://contacts.google.com" && event.data.indexOf("searchForEmail=") != -1) {
 
-                    console.log(event.data);
+                    // console.log(event.data);
                     var email_address = event.data;
                     email_address = email_address.replace("searchForEmail=","");
-                    console.log("Found email to search for: " + email_address);
+                    // console.log("Found email to search for: " + email_address);
 
                     $('input[name="q"]').val(email_address);
                     $('button[aria-label="Search Mail"]').click();
-                    console.log("Search icon clicked in hovercard!  Searching for " + email_address + "...");
+                    // console.log("Search icon clicked in hovercard!  Searching for " + email_address + "...");
                 }
             });
         }
