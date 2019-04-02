@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Fix Gmail Email Search
 // @namespace    https://github.com/gserafini/fix-gmail-email-search-userscript/
-// @version      1.4
+// @version      1.4.1
 // @description  Improved version of the old "Emails" quick search functionality in Gmail, one click to view all emails you've sent or received from any address
 // @author       Gabriel Serafini
 // @license      MIT
@@ -54,7 +54,7 @@
                 );
 
             // Find all emails in pop-up contact cards and also inside emails
-            $('a[href^="mailto:"]').not('.email_search_icon+a[href^="mailto:"]').not('contenteditable="true"+a[href^="mailto:"]')
+            $('a[href^="mailto:"]').not('.email_search_icon+a[href^="mailto:"]').not('div[contenteditable="true"] a[href^="mailto:"]')
                 .each(
                     function (index) {
                         var email_address = $(this).attr('href').replace("mailto:","");
