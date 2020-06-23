@@ -16,7 +16,7 @@
 // @include      *mail.google.com/*
 // @include      *contacts.google.com/widget/hovercard/*
 // @grant        none
-// @require      https://code.jquery.com/jquery-3.5.1.min.js
+// @require      https://code.jquery.com/jquery-3.5.1.min.js#sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=
 // ==/UserScript==
 
 var $ = window.jQuery;
