@@ -1,6 +1,6 @@
 # Fix Gmail Email Search Userscript
 
-This is a Greasemonky userscript to fix missing "Emails" search in Gmail.  It works as of June 22, 2020 (Gmail's markup likely will change over time.)
+This is a Greasemonky userscript to fix missing "Emails" search in Gmail.  It works as of August 5, 2022 (Gmail's markup likely will change over time.)
 
 Please report any issues with the script here:
 https://github.com/gserafini/fix-gmail-email-search-userscript
