@@ -12,9 +12,9 @@
 // @match        *://mail.google.com/*
 // @match        *://contacts.google.com/widget/hovercard/*
 // @match        *://gmail.com/*
-// @include      *gmail.com/*
-// @include      *mail.google.com/*
-// @include      *contacts.google.com/widget/hovercard/*
+// @match        *gmail.com/*
+// @match        *mail.google.com/*
+// @match        *contacts.google.com/widget/hovercard/*
 // @grant        none
 // @require      https://code.jquery.com/jquery-3.5.1.min.js#sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=
 // ==/UserScript==
@@ -75,7 +75,7 @@ var $ = window.jQuery;
 
             if (window.self==window.top) {
                 $('input[name="q"]').val($(this).attr('email'));
-                $('button[aria-label="Search mail"]').click();
+                $('button[aria-label="Search in mail"]').click();
                 // console.log("Search icon clicked!  Searching for " + $(this).attr('email') + "...");
             }
             else {
@@ -96,7 +96,7 @@ var $ = window.jQuery;
                     // console.log("Found email to search for: " + email_address);
 
                     $('input[name="q"]').val(email_address);
-                    $('button[aria-label="Search mail"]').click();
+                    $('button[aria-label="Search in mail"]').click();
                     // console.log("Search icon clicked in hovercard!  Searching for " + email_address + "...");
                 }
             });
