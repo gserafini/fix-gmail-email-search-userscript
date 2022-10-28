@@ -8,6 +8,7 @@
 // @donate       If you like this, PayPal a little love to gserafini@gmail.com (or https://paypal.me/SerafiniStudios )
 // @screenshot   https://raw.githubusercontent.com/gserafini/fix-gmail-email-search-userscript/master/fix-gmail-email-search-screenshot.png
 // @icon         https://raw.githubusercontent.com/gserafini/fix-gmail-email-search-userscript/master/SearchEmails_icon.png
+// @downloadURL  https://github.com/gserafini/fix-gmail-email-search-userscript/raw/master/fix_gmail_email_search.user.js
 // @updateURL    https://github.com/gserafini/fix-gmail-email-search-userscript/raw/master/fix_gmail_email_search.user.js
 // @match        *://mail.google.com/*
 // @match        *://contacts.google.com/widget/hovercard/*
