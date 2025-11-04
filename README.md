@@ -7,7 +7,8 @@
 
 This is a Greasemonkey userscript to fix missing "Emails" search in Gmail.
 
-**Version 1.5.0** - Now using pure vanilla JavaScript with no dependencies! No jQuery required, no TrustedTypes workarounds needed.
+**Version 1.5.1** - Now using pure vanilla JavaScript with no dependencies!
+Works on both personal Gmail and Google Workspace accounts.
 
 Please report any issues with the script here:
 <https://github.com/gserafini/fix-gmail-email-search-userscript>
@@ -52,7 +53,14 @@ contact.
 
 The script will automatically update when new versions are released.
 
-## What's New in v1.5.0
+## What's New
+
+### v1.5.1 (Latest)
+
+- Fixed Google Workspace account support (e.g., `/mail/u/1/` URLs)
+- Contact hovercards now work on all account types
+
+### v1.5.0
 
 - Removed jQuery dependency - now pure vanilla JavaScript
 - No longer requires separate TrustedHTML bypass script
