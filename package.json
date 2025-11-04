@@ -1,0 +1,25 @@
+{
+  "name": "fix-gmail-email-search-userscript",
+  "version": "1.0.0",
+  "description": "This is a Greasemonky userscript to fix missing \"Emails\" search in Gmail.  It works as of 20 March 2019 (Gmail's markup likely will change over time.)",
+  "main": "fix_gmail_email_search.user.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gserafini/fix-gmail-email-search-userscript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/gserafini/fix-gmail-email-search-userscript/issues"
+  },
+  "homepage": "https://github.com/gserafini/fix-gmail-email-search-userscript#readme",
+  "devDependencies": {
+    "eslint": "^9.39.1",
+    "eslint-config-greasemonkey": "^1.0.1"
+  }
+}
