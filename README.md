@@ -1,6 +1,7 @@
 # Fix Gmail Email Search Userscript
 
 [![Release](https://img.shields.io/github/v/release/gserafini/fix-gmail-email-search-userscript)](https://github.com/gserafini/fix-gmail-email-search-userscript/releases)
+[![GitHub stars](https://img.shields.io/github/stars/gserafini/fix-gmail-email-search-userscript?style=social)](https://github.com/gserafini/fix-gmail-email-search-userscript/stargazers)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/gserafini/fix-gmail-email-search-userscript/blob/master/LICENSE)
 [![Vanilla JS](https://img.shields.io/badge/vanilla-JS-yellow.svg)](https://github.com/gserafini/fix-gmail-email-search-userscript)
 [![No Dependencies](https://img.shields.io/badge/dependencies-none-success.svg)](https://github.com/gserafini/fix-gmail-email-search-userscript)
