@@ -1,4 +1,4 @@
-# Fix Gmail Email Search Userscript
+# Fix Gmail Email Quick Search Userscript
 
 [![Release](https://img.shields.io/github/v/release/gserafini/fix-gmail-email-search-userscript)](https://github.com/gserafini/fix-gmail-email-search-userscript/releases)
 [![GitHub stars](https://img.shields.io/github/stars/gserafini/fix-gmail-email-search-userscript?style=social)](https://github.com/gserafini/fix-gmail-email-search-userscript/stargazers)
@@ -6,21 +6,20 @@
 [![Vanilla JS](https://img.shields.io/badge/vanilla-JS-yellow.svg)](https://github.com/gserafini/fix-gmail-email-search-userscript)
 [![No Dependencies](https://img.shields.io/badge/dependencies-none-success.svg)](https://github.com/gserafini/fix-gmail-email-search-userscript)
 
-This is a Greasemonkey userscript to fix missing "Emails" search in Gmail.
+This userscript restores — and improves — Gmail’s missing “**Emails**” search feature.
 
-**Version 1.5.1** - Now using pure vanilla JavaScript with no dependencies!
-Works on both personal Gmail and Google Workspace accounts.
+In the past, Gmail let you hover over a contact’s name, wait for the hover card, and click “Emails” to see every message you’d exchanged. That option is gone — but this script brings it back, faster and better.
 
-Please report any issues with the script here:
-<https://github.com/gserafini/fix-gmail-email-search-userscript>
+With this script installed, a **search icon** appears next to every contact’s name or email address.
+Click the icon to instantly search for all emails **to or from that contact** — no waiting, no copy/paste, no menus.
+
+The icons appear:
+
+- Next to all clickable email addresses in message threads
+- Inside Gmail hovercards when you hover over a contact’s name
 
 ![Screenshot of new search icon](https://github.com/gserafini/fix-gmail-email-search-userscript/raw/master/fix-gmail-email-search-screenshot.png)
 
-My plan is to keep this up to date as long as they're missing this key functionality.
-
-This script delivers even better functionality than Gmail used to have.  In the past you would have to hover over a contact's name, wait for the pop-up to show, then click the "Emails" link to get a list of all the emails you had sent or received for that contact.
-
-This plugin adds a search icon next to each contact's name.  Click the icon to do an instant search for all emails to or from that contact.  The script adds search icons next to all clickable email addresses, as well as in the hovercards that show up when you hover over a contact's name.
 
 ## Installation
 
@@ -41,7 +40,7 @@ First, install a userscript manager extension for your browser:
 
 Click this link to install:
 
-**[Install Fix Gmail Email Search](https://github.com/gserafini/fix-gmail-email-search-userscript/raw/master/fix_gmail_email_search.user.js)**
+**[Click link to install Fix Gmail Email Search userscript](https://github.com/gserafini/fix-gmail-email-search-userscript/raw/master/fix_gmail_email_search.user.js)**
 
 Your userscript manager will prompt you to install it. Click "Install" to
 confirm.
@@ -68,9 +67,12 @@ The script will automatically update when new versions are released.
 - Uses native DOM methods for better compatibility
 - Smaller file size and faster loading
 
-Any bug-fixes or better ways to do this are welcome!
 
-If you like it and it's saved you some time, please fee free to send a little donation to my PayPal address: <gserafini@gmail.com>.
+Please report any issues with the script here:
+<https://github.com/gserafini/fix-gmail-email-search-userscript>
+
+
+[**Thank You Link - Donate**](https://www.paypal.com/ncp/payment/JXMUT8PE2VCYJ) _(any amount is appreciated, thank you for supporting Open Source!)_
 
 Thanks, and happy searching!
 
