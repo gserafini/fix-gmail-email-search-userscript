@@ -69,7 +69,7 @@ The script will automatically update when new versions are released.
 
 
 Please report any issues with the script here:
-<https://github.com/gserafini/fix-gmail-email-search-userscript>
+<https://github.com/gserafini/fix-gmail-email-search-userscript/issues>
 
 
 [**Thank You Link - Donate**](https://www.paypal.com/ncp/payment/JXMUT8PE2VCYJ) _(any amount is appreciated, thank you for supporting Open Source!)_
